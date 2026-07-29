@@ -15,14 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
+        User::create([
             'name' => 'Admin Sistema',
             'dni' => '12345678',
             'role' => '1',
             'password' => '12345678',
         ]);
 
-        User::factory()->create([
+        User::create([
             'name' => 'Alumno Prueba',
             'dni' => '87654321',
             'role' => '5',
