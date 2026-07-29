@@ -1,4 +1,4 @@
-import{a as e,i as t,n,s as r}from"./app-D_VoVDPg.js";import{n as i,t as a}from"./jsx-runtime-COGKBrJ5.js";var o=i(),s=r(e(),1),c=a();function l(e){let r=(0,o.c)(49),{children:i}=e,{url:a}=t(),{auth:l}=t().props,[u,d]=(0,s.useState)(!1),f=l?.user?.name||`Ariel Gonzalez`,p;r[0]===f?p=r[1]:(p={name:f,role:`Alumno`,grade:`4° B`},r[0]=f,r[1]=p);let m=p,h;r[2]===u?h=r[3]:(h=u&&(0,c.jsx)(`div`,{className:`fixed inset-0 bg-slate-900/50 z-40 lg:hidden`,onClick:()=>d(!1)}),r[2]=u,r[3]=h);let g=`
+import{a as e,i as t,n,s as r}from"./app-BSs5VDIx.js";import{n as i,t as a}from"./jsx-runtime-CZqnO1xS.js";var o=i(),s=r(e(),1),c=a();function l(e){let r=(0,o.c)(49),{children:i}=e,{url:a}=t(),{auth:l}=t().props,[u,d]=(0,s.useState)(!1),f=l?.user?.name||`Ariel Gonzalez`,p;r[0]===f?p=r[1]:(p={name:f,role:`Alumno`,grade:`4° B`},r[0]=f,r[1]=p);let m=p,h;r[2]===u?h=r[3]:(h=u&&(0,c.jsx)(`div`,{className:`fixed inset-0 bg-slate-900/50 z-40 lg:hidden`,onClick:()=>d(!1)}),r[2]=u,r[3]=h);let g=`
                 fixed lg:sticky top-0 left-0 z-50
                 w-[280px] h-screen
                 bg-white border-r border-slate-200

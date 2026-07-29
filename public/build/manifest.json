@@ -1,18 +1,18 @@
 {
-  "_AdminLayout-DBlj_ahi.js": {
-    "file": "assets/AdminLayout-DBlj_ahi.js",
+  "_AdminLayout-DmJqIu4b.js": {
+    "file": "assets/AdminLayout-DmJqIu4b.js",
     "name": "AdminLayout",
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js"
+      "_jsx-runtime-CZqnO1xS.js"
     ]
   },
-  "_AlumnoLayout-BhAf6jqI.js": {
-    "file": "assets/AlumnoLayout-BhAf6jqI.js",
+  "_AlumnoLayout-B2SxT2YU.js": {
+    "file": "assets/AlumnoLayout-B2SxT2YU.js",
     "name": "AlumnoLayout",
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js"
+      "_jsx-runtime-CZqnO1xS.js"
     ]
   },
   "_fonts-C9MNnjVw.css": {
@@ -43,15 +43,15 @@
     "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
-  "_jsx-runtime-COGKBrJ5.js": {
-    "file": "assets/jsx-runtime-COGKBrJ5.js",
+  "_jsx-runtime-CZqnO1xS.js": {
+    "file": "assets/jsx-runtime-CZqnO1xS.js",
     "name": "jsx-runtime",
     "imports": [
       "resources/js/app.tsx"
     ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-C9vVILcv.css",
+    "file": "assets/app-DzbB3Sfk.css",
     "name": "app",
     "names": [
       "app.css"
@@ -60,7 +60,7 @@
     "isEntry": true
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-D_VoVDPg.js",
+    "file": "assets/app-BSs5VDIx.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -69,6 +69,7 @@
       "resources/js/pages/admin/dashboard.tsx",
       "resources/js/pages/admin/directores/registrar.tsx",
       "resources/js/pages/admin/preceptores/registrar.tsx",
+      "resources/js/pages/admin/profesores/asignar-materias.tsx",
       "resources/js/pages/admin/profesores/registrar.tsx",
       "resources/js/pages/admin/tutores/registrar.tsx",
       "resources/js/pages/alumno/dashboard.tsx",
@@ -79,121 +80,132 @@
     ]
   },
   "resources/js/pages/admin/alumnos/inscribir.tsx": {
-    "file": "assets/inscribir-JGxIoJPW.js",
+    "file": "assets/inscribir-B3kO8g-V.js",
     "name": "inscribir",
     "src": "resources/js/pages/admin/alumnos/inscribir.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/admin/dashboard.tsx": {
-    "file": "assets/dashboard-BocLhpaO.js",
+    "file": "assets/dashboard-DmAC374W.js",
     "name": "dashboard",
     "src": "resources/js/pages/admin/dashboard.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/admin/directores/registrar.tsx": {
-    "file": "assets/registrar-Dk1dd8pg.js",
+    "file": "assets/registrar-DTJGlmTa.js",
     "name": "registrar",
     "src": "resources/js/pages/admin/directores/registrar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/admin/preceptores/registrar.tsx": {
-    "file": "assets/registrar-D5Shmgnr.js",
+    "file": "assets/registrar-C-srN097.js",
     "name": "registrar",
     "src": "resources/js/pages/admin/preceptores/registrar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
+    ]
+  },
+  "resources/js/pages/admin/profesores/asignar-materias.tsx": {
+    "file": "assets/asignar-materias-BfRaXr6M.js",
+    "name": "asignar-materias",
+    "src": "resources/js/pages/admin/profesores/asignar-materias.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/admin/profesores/registrar.tsx": {
-    "file": "assets/registrar-B7YSJH58.js",
+    "file": "assets/registrar-DBhe4WIP.js",
     "name": "registrar",
     "src": "resources/js/pages/admin/profesores/registrar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/admin/tutores/registrar.tsx": {
-    "file": "assets/registrar-CWH7uVSm.js",
+    "file": "assets/registrar-CWA9x-ul.js",
     "name": "registrar",
     "src": "resources/js/pages/admin/tutores/registrar.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AdminLayout-DBlj_ahi.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AdminLayout-DmJqIu4b.js"
     ]
   },
   "resources/js/pages/alumno/dashboard.tsx": {
-    "file": "assets/dashboard-D7ScTg50.js",
+    "file": "assets/dashboard-Cqm-7KKo.js",
     "name": "dashboard",
     "src": "resources/js/pages/alumno/dashboard.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AlumnoLayout-BhAf6jqI.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AlumnoLayout-B2SxT2YU.js"
     ]
   },
   "resources/js/pages/alumno/materias.tsx": {
-    "file": "assets/materias-C-yj4ffR.js",
+    "file": "assets/materias-C3umaTnu.js",
     "name": "materias",
     "src": "resources/js/pages/alumno/materias.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js",
-      "_AlumnoLayout-BhAf6jqI.js"
+      "_jsx-runtime-CZqnO1xS.js",
+      "_AlumnoLayout-B2SxT2YU.js"
     ]
   },
   "resources/js/pages/auth/change-password.tsx": {
-    "file": "assets/change-password-CQGF3us-.js",
+    "file": "assets/change-password-BMgqlnF3.js",
     "name": "change-password",
     "src": "resources/js/pages/auth/change-password.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js"
+      "_jsx-runtime-CZqnO1xS.js"
     ]
   },
   "resources/js/pages/auth/login.tsx": {
-    "file": "assets/login-DpVAzTvP.js",
+    "file": "assets/login-BhESR-Ls.js",
     "name": "login",
     "src": "resources/js/pages/auth/login.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js"
+      "_jsx-runtime-CZqnO1xS.js"
     ]
   },
   "resources/js/pages/welcome.tsx": {
-    "file": "assets/welcome-DpFeEJRz.js",
+    "file": "assets/welcome-ClKqXLwL.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_jsx-runtime-COGKBrJ5.js"
+      "_jsx-runtime-CZqnO1xS.js"
     ]
   }
 }
