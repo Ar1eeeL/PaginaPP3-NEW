@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     const { url } = usePage();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [isRegistrosOpen, setIsRegistrosOpen] = useState(url.startsWith('/admin/alumnos') || url.startsWith('/admin/profesores'));
+    const [isRegistrosOpen, setIsRegistrosOpen] = useState(url.startsWith('/admin/alumnos') || url.startsWith('/admin/profesores') || url.startsWith('/admin/preceptores') || url.startsWith('/admin/tutores') || url.startsWith('/admin/directores'));
 
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -112,9 +112,30 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                                             Registrar Profesor
                                         </Link>
                                     </li>
-                                    <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Preceptor</Link></li>
-                                    <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Tutor</Link></li>
-                                    <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Director</Link></li>
+                                    <li>
+                                        <Link 
+                                            href="/admin/preceptores/registrar" 
+                                            className={`block py-2 px-3 rounded-md transition-colors ${url === '/admin/preceptores/registrar' ? 'bg-[#003057] text-white font-semibold' : 'hover:text-[#003057]'}`}
+                                        >
+                                            Registrar Preceptor
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link 
+                                            href="/admin/tutores/registrar" 
+                                            className={`block py-2 px-3 rounded-md transition-colors ${url === '/admin/tutores/registrar' ? 'bg-[#003057] text-white font-semibold' : 'hover:text-[#003057]'}`}
+                                        >
+                                            Registrar Tutor
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link 
+                                            href="/admin/directores/registrar" 
+                                            className={`block py-2 px-3 rounded-md transition-colors ${url === '/admin/directores/registrar' ? 'bg-[#003057] text-white font-semibold' : 'hover:text-[#003057]'}`}
+                                        >
+                                            Registrar Director
+                                        </Link>
+                                    </li>
                                     <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Administrador</Link></li>
                                     <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Tesorería</Link></li>
                                     <li><Link href="#" className="block py-2 px-3 hover:text-[#003057] transition-colors rounded-md">Registrar Noticia</Link></li>
