@@ -1,0 +1,66 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile
+            target: dev
+        volumes:
+            - .:/var/www/html
+        env_file: .env
+        environment:
+            APP_ENV: local
+        depends_on:
+            - db
+        networks:
+            - paginapp3
+
+    web:
+        image: nginx:1.27-alpine
+        ports:
+            - "${APP_PORT:-8000}:80"
+        volumes:
+            - .:/var/www/html:ro
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+        depends_on:
+            - app
+        networks:
+            - paginapp3
+
+    vite:
+        build:
+            context: .
+            dockerfile: docker/php/Dockerfile
+            target: dev
+        entrypoint: []
+        command: sh -c "npm install && npm run dev -- --host"
+        environment:
+            VITE_HMR_HOST: localhost
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "5173:5173"
+        networks:
+            - paginapp3
+
+    db:
+        image: mysql:8.4
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE:-paginapp3}
+            MYSQL_USER: ${DB_USERNAME:-paginapp3}
+            MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-secret}
+        volumes:
+            - db_data:/var/lib/mysql
+        ports:
+            - "${FORWARD_DB_PORT:-3306}:3306"
+        networks:
+            - paginapp3
+
+networks:
+    paginapp3:
+        driver: bridge
+
+volumes:
+    db_data:
+        driver: local

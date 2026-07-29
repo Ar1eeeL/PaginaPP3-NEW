@@ -1,0 +1,17 @@
+.git
+.github
+.vscode
+.claude
+.agents
+node_modules
+vendor
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+.env
+.env.*
+!.env.example
+docker-compose*.yml
+Dockerfile
+README.md
