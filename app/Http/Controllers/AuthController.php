@@ -23,8 +23,21 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            if (Auth::user()->role === 'admin') {
-                return redirect()->route('admin.dashboard');
+            $role = (string) Auth::user()->role;
+            
+            $route = match($role) {
+                '1' => 'admin.dashboard',
+                '2' => 'director.dashboard',
+                '3' => 'preceptor.dashboard',
+                '4' => 'tesoreria.dashboard',
+                '5' => 'alumno.dashboard',
+                '6' => 'tutor.dashboard',
+                default => 'home',
+            };
+
+            // Redirige si la ruta existe, de lo contrario manda al home para que no de error
+            if (\Illuminate\Support\Facades\Route::has($route)) {
+                return redirect()->route($route);
             }
 
             return redirect()->route('home');

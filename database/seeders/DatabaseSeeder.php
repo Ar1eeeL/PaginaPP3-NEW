@@ -18,13 +18,15 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Admin Sistema',
             'dni' => '12345678',
-            'role' => 'admin',
+            'role' => '1',
+            'password' => '12345678',
         ]);
 
         User::factory()->create([
             'name' => 'Alumno Prueba',
             'dni' => '87654321',
-            'role' => 'alumno',
+            'role' => '5',
+            'password' => '12345678',
         ]);
     }
 }
