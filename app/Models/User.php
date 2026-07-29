@@ -17,11 +17,12 @@ use Illuminate\Support\Carbon;
  * @property string $dni
  * @property string $role
  * @property string $password
+ * @property bool $must_change_password
  * @property string|null $remember_token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  */
-#[Fillable(['name', 'dni', 'role', 'password'])]
+#[Fillable(['name', 'dni', 'role', 'password', 'must_change_password'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -39,5 +40,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function alumno()
+    {
+        return $this->hasOne(Alumno::class);
     }
 }

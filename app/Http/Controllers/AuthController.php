@@ -57,4 +57,43 @@ class AuthController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function showChangePassword()
+    {
+        // Solo si el usuario debe cambiar su contraseña
+        if (!auth()->user()->must_change_password) {
+            return redirect()->route('home');
+        }
+
+        return Inertia::render('auth/change-password');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = auth()->user();
+        $user->password = \Illuminate\Support\Facades\Hash::make($request->password);
+        $user->must_change_password = false;
+        $user->save();
+
+        $role = (string) $user->role;
+        $route = match($role) {
+            '1' => 'admin.dashboard',
+            '2' => 'director.dashboard',
+            '3' => 'preceptor.dashboard',
+            '4' => 'tesoreria.dashboard',
+            '5' => 'alumno.dashboard',
+            '6' => 'tutor.dashboard',
+            default => 'home',
+        };
+
+        if (\Illuminate\Support\Facades\Route::has($route)) {
+            return redirect()->route($route);
+        }
+
+        return redirect()->route('home');
+    }
 }
